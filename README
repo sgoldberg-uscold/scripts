@@ -1,0 +1,36 @@
+Scripts
+
+This project contains useful scripts for my personal work, but may be helpful to other developers.
+
+be_cmdline.sh
+
+    Runs BE via the command line.
+
+compare_pdfs_html.sh
+
+    Compares 2 directories of same-named PDFs, and presents the results in an easy-to-read HTML format.
+    This is useful when testing code changes. Generate PDFs without your change in one directory, and with your change in another directory. Make sure the PDFs have the same name. Then use the script to compare the results.
+
+    Requires installing command-line tool pdftotext. Use this command:
+        brew install poppler
+
+    Running the script:
+    ./compare_pdfs_html.sh "dir1" "dir2"
+
+start_hazelcast.sh
+
+    Starts hazelcast from the command line.
+    Handy when you don't want to tie up resources with another instance of IntelliJ.
+    Tip: Add the following to your command line profile (for example, .zshrc):
+        alias hazelcast='/path/to/your/scripts/start_hazelcast.sh'
+    
+    Then you can just type 'hazelcast' at the command line to start it.
+
+start_uscs_auth.sh
+
+    Starts uscs_auth from the command line.
+    Handy when you don't want to tie up resources with another instance of IntelliJ.
+    Tip: Add the following to your command line profile (for example, .zshrc):
+        alias uscs_auth='/path/to/your/scripts/start_uscs_auth.sh'
+    
+    Then you can just type 'uscs_auth' at the command line to start it.
