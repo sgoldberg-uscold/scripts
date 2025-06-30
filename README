@@ -34,3 +34,15 @@ start_uscs_auth.sh
         alias uscs_auth='/path/to/your/scripts/start_uscs_auth.sh'
     
     Then you can just type 'uscs_auth' at the command line to start it.
+    
+testng_thread_analyzer.py
+
+    This is a Python script that analyzes a TestNG xml file to report on how many threads it is set up to use.
+    
+    From the Mac command line:
+
+    python3 testng_thread_analyzer.py <TestNG xml file name> -o <output file html>
+    
+    Example:
+
+    python3 testng_thread_analyzer.py /Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/testngBillingReports.xml -o my_report.html
