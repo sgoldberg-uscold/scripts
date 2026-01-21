@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestNG Suite Thread Count Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+        h2 { color: #555; margin-top: 30px; }
+        .main-info { background-color: #e8f5e8; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .summary { background-color: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #ffc107; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .error { color: #d32f2f; }
+        .success { color: #388e3c; }
+        .thread-count { font-weight: bold; color: #1976d2; }
+        .parallel-value { font-weight: bold; color: #e91e63; }
+        .actual-threads { font-weight: bold; color: #ff9800; }
+        .file-path { font-family: monospace; font-size: 0.9em; color: #666; }
+        .default-value { font-style: italic; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧵 TestNG Suite Thread Count Analysis Report</h1>
+        
+        <div class="main-info">
+            <h2>📁 Main Suite File</h2>
+            <p><strong>File:</strong> <span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/testngBillingReports.xml</span></p>
+            <p><strong>Suite Name:</strong> Billing and Report Suite</p>
+            <p><strong>Thread Count:</strong> <span class="thread-count"><span class="thread-count">3</span></span></p>
+            <p><strong>Parallel:</strong> <span class="parallel-value">methods</span></p>
+            <p><strong>Actual Threads Used:</strong> <span class="actual-threads">3</span></p>
+        </div>
+        
+        <div class="summary">
+            <h2>📊 Summary</h2>
+            <p><strong>Total Suite Files:</strong> 32</p>
+            <p><strong>Successfully Parsed:</strong> <span class="success">32</span></p>
+            <p><strong>Errors/Not Found:</strong> <span class="error">0</span></p>
+            <p><strong>Total Actual Threads (All Suites):</strong> <span class="actual-threads">32</span></p>
+        </div>
+        
+        <h2>📋 Suite Files Detail</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>File Path</th>
+                    <th>Suite Name</th>
+                    <th>Parallel</th>
+                    <th>Thread Count</th>
+                    <th>Actual Threads</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/invoiceTestng1.xml</span></td>
+                    <td>Billing Invoice Generation, Credit Memo</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/invoiceTestng2.xml</span></td>
+                    <td>Billing Invoice Generation Thread 2</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/invoiceTestng3.xml</span></td>
+                    <td>Billing Invoice Generation Thread 3 757 - Toyama</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/invoiceTestng4.xml</span></td>
+                    <td>Billing Invoice Generation Thread 1 170 - Warsaw</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsAnalysisTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsAutomaticLpnExpirationJobTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsExtraCharge.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryActivityTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryActivityTestng2.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryActivityTestng3.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryActivityTestng4.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryTestng2.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryTestng3.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsInventoryTestng4.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsLocationTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsLotExpirationTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsOrderTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsOtherTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsOtherTestng2.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsPotentialPickShortageTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTakeWeightAuditTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTakeWeightTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTallySheetTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTallySheetTestng2.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTonnageTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsTurnTimeTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsWorkSheetTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/edi846ReportTesting.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/asnReportTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportBlastLogTestng.xml</span></td>
+                    <td>Reports</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+                <tr>
+                    <td><span class="file-path">/Users/sgoldberg/Documents/Projects/USCS-AQA/ui/src/test/resources/billingAndReportRunner/reportsAgedAnalysisTestng.xml</span></td>
+                    <td>Aged Analysis Report</td>
+                    <td><span class="parallel-value">none</span></td>
+                    <td><span class="default-value">default</span></td>
+                    <td><span class="actual-threads">1</span></td>
+                    <td><span class="success">✅ Success</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em;">
+            <p>Report generated on: 2025-06-30 15:54:19</p>
+            <p><strong>Notes:</strong></p>
+            <ul>
+                <li>When parallel="none" (or not set), only 1 thread is used regardless of thread-count setting</li>
+                <li>When parallel execution is enabled but thread-count is not specified, TestNG defaults to 5 threads</li>
+                <li>"default" indicates the thread-count attribute was not explicitly set in the XML</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
