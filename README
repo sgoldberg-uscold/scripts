@@ -17,6 +17,32 @@ compare_pdfs_html.sh
     Running the script:
     ./compare_pdfs_html.sh "dir1" "dir2"
 
+copilot-token-usage.sh
+
+    Reports GitHub Copilot CLI token usage (input, output, cache read, cache write) grouped by day,
+    sourced from the local ~/.copilot/session-store.db assistant_usage_events table.
+    Prints a daily breakdown plus average tokens per calendar day and per active day.
+
+    Usage:
+    ./copilot-token-usage.sh [DAYS]
+
+    DAYS defaults to 30 if not provided.
+
+    Example:
+    ./copilot-token-usage.sh 7
+
+deadbranchlist.sh
+
+    Identifies local git branches with no matching remote branch (never pushed, or pushed then
+    deleted after merge/close) and writes a dated markdown report to
+    ~/Documents/Docs/Copilot/branch-reports for manual review. Does NOT delete any branches.
+
+    Usage:
+    ./deadbranchlist.sh <path-to-repo>
+
+    Example:
+    ./deadbranchlist.sh ~/Documents/Projects/USCS-BE
+
 start_hazelcast.sh
 
     Starts hazelcast from the command line.
@@ -34,6 +60,13 @@ start_uscs_auth.sh
         alias uscs_auth='/path/to/your/scripts/start_uscs_auth.sh'
     
     Then you can just type 'uscs_auth' at the command line to start it.
+
+stop_be.sh
+
+    Stops the BE Liberty server and verifies that it is no longer running.
+    If Liberty confirms BE is stopped, the script also removes a stale server lock that could prevent a restart.
+    Pass --force to skip Liberty's normal quiesce period:
+        ./stop_be.sh --force
     
 testng_thread_analyzer.py
 
